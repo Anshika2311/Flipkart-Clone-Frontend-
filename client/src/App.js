@@ -5,13 +5,11 @@ import {BrowserRouter, Route,Switch} from 'react-router-dom';
 import Header from './Components/header/header';
 import Home from './Components/Home/Home';
 import Cart from './Components/Cart/cart';
-import { TemplateProvider } from './templates/TemplateProvider';
-import  ContextProvider from './context/ContextProvider';
+// import { TemplateProvider } from './templates/TemplateProvider';
 
 function App() {
   return (
-    <TemplateProvider >
-      <ContextProvider>
+    // <TemplateProvider >
       <BrowserRouter>
         <Header/>
         <Switch>
@@ -19,8 +17,7 @@ function App() {
           <Cart path="/cart" component={Cart} exact/>
         </Switch>
       </BrowserRouter>
-      </ContextProvider>
-    </TemplateProvider>
+    // </TemplateProvider>
       
   );
 }

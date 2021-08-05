@@ -5,7 +5,6 @@ import cors from 'cors';
 //components
 import Connection from './database/db.js';
 import DeafultData from './default.js';
-import Routes from './routes/routes.js';
 
 const app = express()
 const PORT = 8000
@@ -13,11 +12,6 @@ const PORT = 8000
 app.use(bodyParser.json({extended:true}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
-app.use('/', Routes)
-
-app.use('/signup',()=>{
-    //data saved to database
-})
 
 Connection();
 
